@@ -18,40 +18,46 @@
     <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
       <nav class="navbar navbar-expand-lg flex-column">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">YelpCamp</a>
-          <div class="float-md-left">
-            <button
-              class="navbar-toggler"
-              style="background-color: white"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
+          <div>
+            <a class="navbar-brand text-white" href="#">YelpCamp</a>
+          </div>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
                 <a
                   class="nav-link active text-white"
                   aria-current="page"
                   href="#"
                   >Home</a
                 >
+              </li>
+              <li>
                 <a class="nav-link text-white" href="/campgrounds"
                   >Campgrounds</a
                 >
+              </li>
 
-                <% if(!currentUser) { %>
-                <a class="nav-link text-white" href="/login">Login</a>
+              <% if(!currentUser) { %>
+              <li><a class="nav-link text-white" href="/login">Login</a></li>
+              <li>
                 <a class="nav-link text-white" href="/register">Register</a>
-                <% } else { %>
+              </li>
+              <% } else { %>
+              <li>
                 <a class="nav-link text-white" href="/logout">Logout</a>
-                <% } %>
-              </div>
-            </div>
+              </li>
+              <% } %>
+            </ul>
           </div>
         </div>
       </nav>
