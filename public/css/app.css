@@ -1,0 +1,10 @@
+#clusterMap {
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}
