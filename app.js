@@ -22,7 +22,7 @@ const userRoutes = require("./routes/users");
 
 const MongoDBStore = require("connect-mongo")(session);
 
-const { MongoClient } = require("mongodb");
+// const { MongoClient } = require("mongodb");
 
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./helper/ExpressError");
@@ -174,20 +174,20 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 3000;
 
-const uri = process.env.MONGO_CONNECTION_STRING;
-const client = new MongoClient(uri);
+// const uri = process.env.MONGO_CONNECTION_STRING;
+// const client = new MongoClient(uri);
 
-client.connect((err) => {
-  if (err) {
-    console.error(err);
-    return false;
-  }
-  // connection to mongo is successful, listen for requests
-  app.listen(PORT, () => {
-    console.log("listening for requests");
-  });
-});
-
-// app.listen(port, () => {
-//   console.log(`LISTENING ON PORT ${port}`);
+// client.connect((err) => {
+//   if (err) {
+//     console.error(err);
+//     return false;
+//   }
+//   // connection to mongo is successful, listen for requests
+//   app.listen(PORT, () => {
+//     console.log("listening for requests");
+//   });
 // });
+
+app.listen(port, () => {
+  console.log(`LISTENING ON PORT ${port}`);
+});
